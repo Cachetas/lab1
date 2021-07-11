@@ -1,0 +1,80 @@
+- TaskServer - 
+
+Servidor iniciado.
+Em espera por ligação de clientes.
+Cliente ligado.
+Em espera por ligação de clientes.
+Em espera por instrução de cliente.
+Instrunção recebida: Registar Tarefa (R).
+Resposta enviada.
+Tarefa recebida: Arrumar a casa
+Tarefa registada.
+Em espera por instrução de cliente.
+Cliente ligado.
+Em espera por ligação de clientes.
+Em espera por instrução de cliente.
+Instrunção recebida: Registar Tarefa (R).
+Resposta enviada.
+Tarefa recebida: Passear o cão
+Tarefa registada.
+Em espera por instrução de cliente.
+Instrunção recebida: Listar - L.
+Resposta enviada.
+Em espera por instrução de cliente.
+
+Instrunção recebida: Sair - (Q).
+
+O cliente Socket[addr=/127.0.0.1,port=52725,localport=4444] enviou a intrução Q - Ligação terminada
+
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endAccept(NioSocketImpl.java:689)
+	at java.base/sun.nio.ch.NioSocketImpl.accept(NioSocketImpl.java:762)
+	at java.base/java.net.ServerSocket.implAccept(ServerSocket.java:684)
+	at java.base/java.net.ServerSocket.platformImplAccept(ServerSocket.java:650)
+	at java.base/java.net.ServerSocket.implAccept(ServerSocket.java:626)
+	at java.base/java.net.ServerSocket.implAccept(ServerSocket.java:583)
+	at java.base/java.net.ServerSocket.accept(ServerSocket.java:540)
+	at AppServer.TaskServer.main(TaskServer.java:30)
+
+Instrunção recebida: Sair - (Q).
+
+O cliente Socket[addr=/127.0.0.1,port=52728,localport=4444] enviou a intrução Q - Ligação terminada
+
+
+
+- TaskClient 1 - 
+
+Introduza o IP do servidor: 127.0.0.1
+Introduza o porto: 4444
+Server Msg - Ligação estabelecida.
+Instrução (L -> Listar Tarefa; R -> Resgistar Tarefa; Q -> Sair): R
+Server Msg - Introduza a tarefa a registar: Arrumar a casa
+Server Msg - Tarefa registada.
+
+Instrução (L -> Listar Tarefa; R -> Resgistar Tarefa; Q -> Sair): R
+Server Msg - Introduza a tarefa a registar: Passear o cão
+Server Msg - Tarefa registada.
+
+Instrução (L -> Listar Tarefa; R -> Resgistar Tarefa; Q -> Sair): Q
+Server Msg - Ligação terminada.
+
+
+
+
+
+- TaskClient 2 - 
+
+Introduza o IP do servidor: 127.0.0.1
+Introduza o porto: 4444
+Server Msg - Ligação estabelecida.
+Instrução (L -> Listar Tarefa; R -> Resgistar Tarefa; Q -> Sair): L
+Server Msg - Lista de tarefas: Tarefa 1 -> Arrumar a casa; Tarefa 2 -> Passear o cão; 
+
+Instrução (L -> Listar Tarefa; R -> Resgistar Tarefa; Q -> Sair): Q
+Server Msg - Ligação terminada.
+
+
+
+
+
+
